@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/et_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btn_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search" />
+
+
+    </LinearLayout>
+
+    <fragment xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/header"
+        tools:context="com.ismetseyhan.user.rksoft.MapsActivity" />
+
+
+    <Button
+        android:id="@+id/btn_Sat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/trafik"
+        android:layout_alignParentBottom="true"
+        android:onClick="gorunum_degis"
+        android:text="View"
+        android:textSize="10sp" />
+
+
+    <ZoomControls
+        android:id="@+id/zoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="Onclick" />
+
+
+    <Button
+        android:id="@+id/rksoft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="14dp"
+        android:onClick="konumu_göster"
+        android:text="RkSoft" />
+
+    <Button
+        android:onClick="temizle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_Sat"
+        android:layout_alignEnd="@+id/rksoft"
+        android:layout_marginBottom="50dp"
+        android:text="Clear"
+        android:textSize="10sp"
+        android:id="@+id/button2" />
+
+    <Button
+        android:id="@+id/trafik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_Sat"
+        android:layout_alignParentStart="true"
+        android:onClick="trafikgstr"
+        android:text="Traffic"
+        android:textSize="10sp" />
+
+
+</RelativeLayout>
